@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List & Calendar</title>
+
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+
+    <!-- Your own styles -->
+    <link rel="stylesheet" href="styles-task-list-calendar.css">
+</head>
+<body>
+
+    <div class="todo-container">
+        <h1>Task List & Calendar</h1>
+
+        <!-- Go back button -->
+        <button class="go-back-btn" onclick="window.location.href='index.html';">Go Back to Task Assignment</button>
+
+        <!-- Tabs: Tasks and Calendar -->
+        <div class="tabs">
+            <button class="tab-btn" onclick="showTab('tasks')">Tasks</button>
+            <button class="tab-btn" onclick="showTab('calendar')">Calendar</button>
+        </div>
+
+        <!-- Task List -->
+        <div id="tasks-tab" class="tab-content">
+            <ul id="task-list"></ul>
+        </div>
+
+        <!-- Calendar View -->
+        <div id="calendar-tab" class="tab-content" style="display: none;">
+            <div id="calendar"></div>
+        </div>
+
+    </div>
+
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+    <!-- Your custom JS -->
+    <script src="script-tasks-calendar.js"></script>
+
+</body>
+</html>

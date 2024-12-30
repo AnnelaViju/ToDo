@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Assignment</title>
+    <link rel="stylesheet" href="styles-assignment.css">
+</head>
+<body>
+    <div class="task-assignment-container">
+        <h1>Assign a Task</h1>
+
+        <form id="taskForm">
+            <label for="taskTitle">Task Title</label>
+            <input type="text" id="taskTitle" required>
+
+            <label for="taskDueDate">Due Date</label>
+            <input type="date" id="taskDueDate" required>
+
+            <label for="taskAssignee">Assignee (Optional)</label>
+            <input type="text" id="taskAssignee">
+
+            <label for="taskLabels">Labels (Optional)</label>
+            <input type="text" id="taskLabels">
+
+            <button type="submit">Assign Task</button>
+        </form>
+
+        <!-- Button to go to the next page -->
+        <button class="go-to-next-btn" onclick="window.location.href='tasks.html';">Go to Task List & Calendar</button>
+    </div>
+
+    <script src="script-assignment.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;  /* Ensure the body takes full height */
+    justify-content: flex-start;
+    position: relative;  /* Allows positioning of absolute elements */
+}
+
+/* Container for task list & calendar */
+.todo-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    position: relative;  /* Ensure it is the reference for absolute positioning */
+}
+
+/* Header */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tabs Styling */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tab-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Task List Styling */
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#task-list h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.task-details {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.task-details span {
+    display: block;
+    margin: 5px 0;
+}
+
+
+/* Go Back Button */
+.go-back-btn {
+    position: fixed;
+    bottom: 57px; /* Move the button down by an additional 1 cm (57px) */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 999; /* Ensure it stays on top */
+}
+
+.go-back-btn:hover {
+    background-color: #218838;
+}
+
+/* Add padding to the bottom of the todo-container to prevent overlap with the button */
+.todo-container {
+    padding-bottom: 80px; /* Make sure the content doesn't overlap the button */
+}
+
+/* FullCalendar Styling */
+#calendar {
+    width: 100%;
+    min-height: 500px; /* Ensure the calendar has a reasonable height */
+}
+
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .todo-container {
+        padding: 15px;
+    }
+
+    .tab-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
